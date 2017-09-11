@@ -11,6 +11,7 @@ namespace LectureNotes
     {
         static void Main(string[] args)
         {
+            
             // In an ideal world, programmers that use our Automobile class use it correctly.
             Automobile subaru = new Automobile();
             subaru.isStarted = true; //start the car
@@ -25,12 +26,22 @@ namespace LectureNotes
             subaru.speed = 0;  // reverse to 0mph
             subaru.isStarted = false; //turn off the car
 
+
+
+
+
+
             // Probably how a programmer will end up using it though...
             Automobile toyota = new Automobile();
             // ?? wait we're not even going to start the car?
             toyota.speed = 100; // turbo mode to 100mph
             toyota.speed = 0; // turbo brake to 0mph
             // ? and leave it running?
+
+
+
+
+
 
 
             // Lets have more fun (but not in real life)
