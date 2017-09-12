@@ -49,14 +49,7 @@ namespace TestableClasses.Classes
 
         public void ChannelUp()
         {
-            if (this.isOn && this.currentChannel < 18)
-            {
-                this.currentChannel++;
-            }
-            else if (this.isOn && this.currentChannel == 18)
-            {
-                this.currentChannel = 3;
-            }
+            this.currentChannel++;
         }
 
         public void ChannelDown()
@@ -83,10 +76,7 @@ namespace TestableClasses.Classes
 
         public void LowerVolume()
         {
-            if (this.isOn && this.currentVolume > 0)
-            {
-                this.currentVolume--;
-            }
+            this.currentChannel--;
         }
 
     }
