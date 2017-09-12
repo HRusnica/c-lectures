@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Classes\LoopsAndArrayExercises.cs" />
     <Compile Include="Classes\StringExercises.cs" />
+    <Compile Include="Classes\Television.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
