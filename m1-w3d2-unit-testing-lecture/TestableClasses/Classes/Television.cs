@@ -8,6 +8,7 @@ namespace TestableClasses.Classes
 {
     public class Television
     {
+
         private bool isOn = false;
         private int currentChannel = 3;
         private int currentVolume = 2;
@@ -26,6 +27,7 @@ namespace TestableClasses.Classes
         {
             get { return currentVolume; }
         }
+
 
         public void TurnOff()
         {
@@ -49,7 +51,14 @@ namespace TestableClasses.Classes
 
         public void ChannelUp()
         {
-            this.currentChannel++;
+            if(this.currentChannel >= 3 && this.currentChannel < 18)
+            {
+                this.currentChannel++;
+            }
+            else
+            {
+                this.currentChannel = 3;
+            }
         }
 
         public void ChannelDown()

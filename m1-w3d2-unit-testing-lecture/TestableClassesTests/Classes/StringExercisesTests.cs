@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TestableClasses.Classes;
 
 namespace TestableClasses.Classes.Tests
 {
@@ -20,6 +21,19 @@ namespace TestableClasses.Classes.Tests
         //.IsTrue()
         //.IsNotNull()
         //.IsNull()
+
+        [TestMethod]
+        public void MakeAbbaTest()
+        {
+            //Arrange
+            StringExercises se = new StringExercises();
+
+            //Act
+            string output = se.MakeAbba("Josh", "Tucholski");
+
+            //Assert
+            Assert.AreEqual("JoshTucholskiTucholskiJosh", output);
+        }
 
 
         

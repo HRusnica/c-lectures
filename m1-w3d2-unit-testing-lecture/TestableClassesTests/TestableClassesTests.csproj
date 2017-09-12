@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="Classes\LoopsAndArrayExercisesTests.cs" />
     <Compile Include="Classes\StringExercisesTests.cs" />
+    <Compile Include="Classes\TelevisionTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
