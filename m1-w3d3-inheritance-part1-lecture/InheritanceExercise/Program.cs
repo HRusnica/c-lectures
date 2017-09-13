@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using InheritanceLecture.Calculators;
 
 namespace InheritanceExercise
 {
@@ -11,15 +12,82 @@ namespace InheritanceExercise
     {
         static void Main(string[] args)
         {
-            // OLD MCDONALD
+            // Using Inheritance
+            Console.WriteLine("GAG CALCULATOR");
+            GagCalculator gc = new GagCalculator();
 
-            Console.WriteLine("Old MacDonald had a farm ee ay ee ay oh");
+            Console.WriteLine("Entering 5");
+            gc.EnterNumber(5);
+            Console.WriteLine($"The current value is: {gc.Result}");
 
-            Console.WriteLine("And on his farm there was a " + "CHICKEN" + " ee ay ee ay oh");
-            Console.WriteLine("With a " + "CLUCK CLUCK" + " here and a " + "CLUCK CLUCK" + " there");
-            Console.WriteLine("Here a " + "CLUCK" + ", there a " + "CLUCK" + " everywhere a " + "CLUCK CLUCK");
-            Console.WriteLine("Old Macdonald had a farm, ee ay ee ay oh");
+            Console.WriteLine("Adding 12");
+            gc.Add(12);            
+            Console.WriteLine($"The current value is: {gc.Result}");
+
+
+            Console.WriteLine(gc); //WHAT DOES THIS PRINT??
             Console.WriteLine();
+
+
+
+
+
+
+
+
+
+
+
+
+
+            Calculator basicCalc = new Calculator();
+            Console.WriteLine($"The current value is: {basicCalc.Result}");
+
+            Console.WriteLine("Entering 5");
+            basicCalc.EnterNumber(5);
+            Console.WriteLine($"The current value is: {basicCalc.Result}");
+
+            Console.WriteLine("Adding 12");
+            basicCalc.Add(12);            
+            Console.WriteLine($"The current value is: {basicCalc.Result}");
+
+
+
+            Console.WriteLine();
+            Console.WriteLine("PROGRAMMER CALC");
+            ProgrammingCalculator programmerCalc = new ProgrammingCalculator();
+            Console.WriteLine($"The current value is: {programmerCalc.Result}");
+
+            Console.WriteLine("Entering 5");
+            programmerCalc.EnterNumber(5);
+            Console.WriteLine($"The current value is: {programmerCalc.Result}");
+
+            Console.WriteLine("Adding 12");
+            programmerCalc.Add(12);
+            Console.WriteLine($"The current value is: {programmerCalc.Result}");
+
+            Console.Write("Showing as binary " );
+            Console.WriteLine(programmerCalc.ToBinary());
+
+
+            Console.WriteLine();
+            Console.WriteLine("SCIENTIFIC CALC");
+            ScientificCalculator science = new ScientificCalculator();
+            Console.WriteLine($"The current value is: {science.Result}");
+
+            Console.WriteLine("Entering 5");
+            science.EnterNumber(5);
+            Console.WriteLine($"The current value is: {science.Result}");
+
+            Console.WriteLine("Adding 12");
+            science.Add(12);
+            Console.WriteLine($"The current value is: {science.Result}");
+
+            
+
+
+
+
 
 
 

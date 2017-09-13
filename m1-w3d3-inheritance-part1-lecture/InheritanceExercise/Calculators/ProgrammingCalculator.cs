@@ -12,7 +12,7 @@ namespace InheritanceLecture.Calculators
     {
         public string ToBinary()
         {
-            return Convert.ToString((int)result, 2);
+            return Convert.ToString((int)base.Result, 2);
         }
     }
 }

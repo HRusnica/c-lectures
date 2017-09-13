@@ -24,7 +24,7 @@ namespace InheritanceLecture.Calculators
             result = number;
         }
 
-        public double Add(double addend)
+        public virtual double Add(double addend)
         {
             result += addend;
             return result;

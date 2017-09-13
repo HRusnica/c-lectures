@@ -10,11 +10,10 @@ namespace InheritanceLecture.Calculators
     // We say a Scientific Calculator "is-a" Calculator.
     public class ScientificCalculator : Calculator
     {
-
         public double Mod(int quotient)
         {
-            result %= quotient;
-            return Result;
+            result = result % quotient;
+            return result;
         }
 
         public double Tan()
@@ -34,8 +33,5 @@ namespace InheritanceLecture.Calculators
             result = Math.Cos(result);
             return result;
         }
-
-        
-
     }
 }

@@ -48,6 +48,7 @@
     <Compile Include="Auctioneering\BuyoutAuction.cs" />
     <Compile Include="Auctioneering\ReserveAuction.cs" />
     <Compile Include="Calculators\Calculator.cs" />
+    <Compile Include="Calculators\GagCalculator.cs" />
     <Compile Include="Calculators\ProgrammingCalculator.cs" />
     <Compile Include="Calculators\ScientificCalculator.cs" />
     <Compile Include="Program.cs" />
