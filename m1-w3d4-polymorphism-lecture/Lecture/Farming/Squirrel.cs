@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,27 +6,24 @@ using System.Threading.Tasks;
 
 namespace Lecture.Farming
 {
-    public class Chicken : FarmAnimal
+    public class Squirrel : FarmAnimal
     {
         public override string Name
         {
             get
             {
-                return "CHICKEN";
+                return "SQUIRREL";
             }
         }
 
         public override string MakeSoundOnce()
         {
-            return "CLUCK";
+            return "PUFF";
         }
 
         public override string MakeSoundTwice()
         {
-            return "CLUCK CLUCK";
+            return "PUFF PUFF";
         }
-
-        
-
     }
 }
