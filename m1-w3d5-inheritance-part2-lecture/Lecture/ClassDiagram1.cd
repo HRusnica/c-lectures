@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Lecture.Farming.Turkey" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAhAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Farming\Turkey.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lecture.Farming.Chicken" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAhAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Farming\Chicken.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lecture.Farming.Cow" Collapsed="true">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAhAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Farming\Cow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lecture.Farming.FarmAnimal" Collapsed="true">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAhAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Farming\FarmAnimal.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Lecture.Farming.Llama" Collapsed="true">
+    <Position X="9.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAhAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Farming\Llama.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lecture.Farming.Squirrel" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAhAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Farming\Squirrel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lecture.Farming.Tractor" Collapsed="true">
+    <Position X="12" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAhAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Farming\Tractor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Lecture.Farming.FarmersWife" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAhAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Farming\FarmersWife.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Lecture.Farming.Fox" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Farming\Fox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Lecture.Farming.ISingableItem" Collapsed="true">
+    <Position X="12" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAhAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Farming\ISingableItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
