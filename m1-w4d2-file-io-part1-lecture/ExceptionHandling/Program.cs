@@ -109,7 +109,7 @@ namespace ExceptionHandling
             */
             try
             {
-                double finalBalance = Withdraw(6000.00);
+                double finalBalance = Withdraw(4000.00);
                 Console.WriteLine("The final balance is " + finalBalance);
             }
             catch(OverdraftException ex)
