@@ -26,10 +26,10 @@ namespace Lecture.Aids
                     for (int x = 0; x < bmp.Width; x++)
                     {
                         for (int y = 0; y < bmp.Height; y++)
-                        {
-                            Color oldPixel = bmp.GetPixel(x, y);
-                            //bmp.SetPixel(x, y, Color.FromArgb(oldPixel.R, oldPixel.G, 20));
-                            bmp.SetPixel(x, y, Color.FromArgb(oldPixel.R, Color.FromKnownColor(KnownColor.Gray)));
+                        {                            
+                            Color oldPixel = bmp.GetPixel(x, y);                            
+                            bmp.SetPixel(x, y, Color.FromArgb(oldPixel.R, 120, 20));
+                            //bmp.SetPixel(x, y, Color.FromArgb(oldPixel.R, Color.FromKnownColor(KnownColor.Yellow)));
                         }
                     }
 
