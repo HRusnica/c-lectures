@@ -1,3 +1,9 @@
+-- Subqueries
+-- What if we wanted to get the name of the smallest country (by surface area)
+-- how would we do that??
+
+
+
 -- Constraints
 
 
