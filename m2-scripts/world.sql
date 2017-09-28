@@ -21,7 +21,7 @@ CREATE TABLE country (
 );
 
 CREATE TABLE city (
-    id integer NOT NULL,
+    id integer NOT NULL IDENTITY(1,1),
     name varchar(64) NOT NULL,
     countrycode character(3) NOT NULL,
     district varchar(64) NOT NULL,
@@ -282,6 +282,7 @@ INSERT INTO country (code, name, continent, region, surfacearea, indepyear, popu
 INSERT INTO country (code, name, continent, region, surfacearea, indepyear, population, lifeexpectancy, gnp, gnpold, localname, governmentform, headofstate, capital, code2) VALUES ('UMI', 'United States Minor Outlying Islands', 'Oceania', 'Micronesia/Caribbean', 16, NULL, 0, NULL, 0.00, NULL, 'United States Minor Outlying Islands', 'Dependent Territory of the US', 'George W. Bush', NULL, 'UM');
 
 
+SET IDENTITY_INSERT city ON;
 
 INSERT INTO city (id, name, countrycode, district, population) VALUES (1, 'Kabul', 'AFG', 'Kabol', 1780000);
 INSERT INTO city (id, name, countrycode, district, population) VALUES (2, 'Qandahar', 'AFG', 'Qandahar', 237500);
@@ -4363,7 +4364,7 @@ INSERT INTO city (id, name, countrycode, district, population) VALUES (4077, 'Ja
 INSERT INTO city (id, name, countrycode, district, population) VALUES (4078, 'Nablus', 'PSE', 'Nablus', 100231);
 INSERT INTO city (id, name, countrycode, district, population) VALUES (4079, 'Rafah', 'PSE', 'Rafah', 92020);
 
-
+SET IDENTITY_INSERT city OFF;
 
 INSERT INTO countrylanguage (countrycode, language, isofficial, percentage) VALUES ('AFG', 'Pashto', 1, 52.4000015);
 INSERT INTO countrylanguage (countrycode, language, isofficial, percentage) VALUES ('NLD', 'Dutch', 1, 95.5999985);
