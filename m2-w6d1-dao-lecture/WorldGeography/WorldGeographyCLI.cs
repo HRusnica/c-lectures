@@ -18,7 +18,7 @@ namespace WorldGeography
         const string Command_RemoveLanguage = "6";
         const string Command_Quit = "q";
 
-        string DatabaseConnectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=World;User ID=te_student;Password=sqlserver1";
+        string DatabaseConnectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=world;User ID=te_student;Password=sqlserver1";
 
         public void RunCLI()
         {
