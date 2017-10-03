@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26228.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipeManager.CLI", "RecipeManager.CLI\RecipeManager.CLI.csproj", "{731B2B89-D5DD-4352-B765-C3E23436D493}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipeManager.CLI.Tests", "RecipeManager.CLI.Tests\RecipeManager.CLI.Tests.csproj", "{D2A57A5C-BBA7-47FD-BD39-700B010F1138}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{731B2B89-D5DD-4352-B765-C3E23436D493}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{731B2B89-D5DD-4352-B765-C3E23436D493}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{731B2B89-D5DD-4352-B765-C3E23436D493}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2A57A5C-BBA7-47FD-BD39-700B010F1138}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2A57A5C-BBA7-47FD-BD39-700B010F1138}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2A57A5C-BBA7-47FD-BD39-700B010F1138}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2A57A5C-BBA7-47FD-BD39-700B010F1138}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
