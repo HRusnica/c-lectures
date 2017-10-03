@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WorldGeography
+namespace RecipeManager.CLI
 {
     public class CLIHelper
     {
