@@ -1,0 +1,11 @@
+﻿h1 {
+    color: #4cff00;
+}
+
+.lessThan50 { 
+    color: #1645fc;
+}
+
+.greaterThan50 {
+    color: #b90af3;
+}

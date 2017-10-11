@@ -1,0 +1,64 @@
+﻿
+@{
+    Layout = null;
+
+    int maxValue = Convert.ToInt32(Request.QueryString["maxValue"]);
+    int stepValue = Convert.ToInt32(Request.QueryString["stepValue"]);
+
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>MetricToImperial</title>
+    <link href="~/Content/style.css" rel="stylesheet" />
+</head>
+<body>
+
+    <form>
+        <input type="text" name="maxValue" placeholder="Enter the max value" />
+        <input type="text" name="stepValue" placeholder="How much do we increment by?" />
+        <button>GO</button>
+    </form>
+
+    @if (maxValue > 0)
+    {
+        <table>
+            <thead>
+                <tr>
+                    <th>Metric Unit</th>
+                    <th>Imperial Unit</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @for (int i = 0; i <= maxValue; i += stepValue)
+                {
+                    if (i < 50)
+                    {
+                        <tr>
+                            <td class="lessThan50">@i  kilometers per hour</td>
+                            <td class="lessThan50">@(i * 0.62) mph</td>
+                        </tr>
+                    }
+                    else
+                    {
+                        <tr>
+                            <td class="greaterThan50">@i  kilometers per hour</td>
+                            <td class="greaterThan50">@(i * 0.62) mph</td>
+                        </tr>
+                    }
+
+                }
+
+            </tbody>
+        </table>
+
+    }
+
+
+</body>
+</html>

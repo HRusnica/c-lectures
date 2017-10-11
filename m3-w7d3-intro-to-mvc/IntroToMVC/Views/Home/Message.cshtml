@@ -1,0 +1,31 @@
+﻿
+@{
+    Layout = null;
+
+    string name = Request.QueryString["name"];
+    string hometown = Request.QueryString["hometown"];
+    //int age = int.Parse(Request.QueryString["personAge"]);
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Message</title>
+    <link href="~/Content/style.css" rel="stylesheet" />
+</head>
+<body>
+
+    <h1>Hello @name</h1>
+    <p>We are watching you from @hometown</p>
+
+    <form>
+        <input type="text" name="hometown" />
+        <input type="text" name="name" />
+        <button>GO!</button>
+    </form>
+
+
+</body>
+</html>
