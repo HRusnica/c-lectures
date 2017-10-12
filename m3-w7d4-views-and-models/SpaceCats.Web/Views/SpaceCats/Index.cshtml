@@ -1,0 +1,39 @@
+﻿@using SpaceCats.Web.Models;
+@model List<SpaceCat>
+
+@{        
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    
+    <h1>Display @Model.Count Space Cats</h1>
+
+    <table>
+
+        @*
+            Dictionary<string, List<SpaceCat>> cats = new Dictionary<string, List<SpaceCat>>();
+            var cats = new Dictionary<string, List<SpaceCat>>();
+        *@
+
+        @foreach(var cat in Model)
+        {
+            
+            <tr>
+                <td><img src="@Url.Content("~/Content/img/" + cat.ImageUrl)" /></td>
+                @*<td><img src="~/Content/img/@cat.ImageUrl" /></td>*@
+                <td>@cat.Name</td>
+                <td>@cat.HomePlanet</td>
+            </tr>
+        }
+
+    </table>
+</body>
+</html>
