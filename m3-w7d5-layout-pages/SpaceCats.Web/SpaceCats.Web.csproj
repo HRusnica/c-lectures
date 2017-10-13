@@ -111,6 +111,8 @@
     <Content Include="Views\SpaceCats\Index.cshtml" />
     <Content Include="Content\fonts\space-age.otf" />
     <Content Include="Content\fonts\space-age.ttf" />
+    <Content Include="Views\Shared\_LayoutPage.cshtml" />
+    <Content Include="Views\SpaceCats\Detail.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

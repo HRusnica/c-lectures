@@ -1,0 +1,13 @@
+﻿@using SpaceCats.Web.Models;
+@model SpaceCat
+
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+    
+}
+
+<h2>@Model.Name</h2>
+<p>From: @Model.HomePlanet</p>
+<img src="@Url.Content("~/Content/img/" + Model.ImageUrl)" />
+

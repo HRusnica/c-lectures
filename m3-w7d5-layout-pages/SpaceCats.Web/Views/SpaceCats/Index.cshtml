@@ -1,43 +1,35 @@
 ﻿@using SpaceCats.Web.Models;
 @model List<SpaceCat>
 
-@{        
-    Layout = null;
+@{
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+    ViewBag.PageTitle = "Space Cat Directory";
+    ViewBag.Keywords = "spacecats directory home-planets";
 }
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-    <link href="~/Content/style.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<p>There are currently @Model.Count known spacecats</p>
 
-</head>
-<body>    
-    <h1>nasa.gov spacecat directory</h1>
+<table id="space-cat-directory">
 
-    <p>There are currently @Model.Count known spacecats</p>
+    @*
+        Dictionary<string, List<SpaceCat>> cats = new Dictionary<string, List<SpaceCat>>();
+        var cats = new Dictionary<string, List<SpaceCat>>();
+    *@
 
-    <table id="space-cat-directory">
+    @foreach (var cat in Model)
+    {
 
-        @*
-            Dictionary<string, List<SpaceCat>> cats = new Dictionary<string, List<SpaceCat>>();
-            var cats = new Dictionary<string, List<SpaceCat>>();
-        *@
+        <tr>
+            <td><a href="@Url.Action("Detail","SpaceCats", new { id = cat.Id})">
+                    <img src="@Url.Content("~/Content/img/" + cat.ImageUrl)" />
+                </a>
+            </td>
+            @*<td><img src="~/Content/img/@cat.ImageUrl" /></td>*@
+            <td><a href="@Url.Action("Detail","SpaceCats", new { id = cat.Id})">@cat.Name</a></td>
+            <td>@cat.HomePlanet</td>
+        </tr>
+    }
 
-        @foreach(var cat in Model)
-        {
-            
-            <tr>
-                <td><img src="@Url.Content("~/Content/img/" + cat.ImageUrl)" /></td>
-                @*<td><img src="~/Content/img/@cat.ImageUrl" /></td>*@
-                <td>@cat.Name</td>
-                <td>@cat.HomePlanet</td>
-            </tr>
-        }
+</table>
 
-    </table>
-</body>
-</html>

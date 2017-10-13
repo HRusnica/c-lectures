@@ -11,5 +11,6 @@ namespace SpaceCats.Web.Models
         public string HomePlanet { get; set; }
         public string ImageUrl { get; set; }
         public string Id { get; set; }
+        public string Keywords { get; set; }
     }
 }

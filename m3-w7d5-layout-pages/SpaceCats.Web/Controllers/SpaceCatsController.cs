@@ -13,8 +13,22 @@ namespace SpaceCats.Web.Controllers
         public ActionResult Index()
         {
             //normally we go to the DAL for this
-            List<SpaceCat> model = GetAllSpaceCats();
-            return View("Index", model); //<-- Index is the name of Index.cshtml
+            List<SpaceCat> cats = GetAllSpaceCats();
+            return View("Index", cats); //<-- Index is the name of Index.cshtml
+        }
+
+        public ActionResult Detail(string id = "")
+        {
+            SpaceCat cat = GetSpaceCat(id);
+
+            if (cat == null)
+            {
+                return HttpNotFound();
+            }
+
+
+
+            return View("Detail", cat);
         }
 
 
@@ -58,9 +72,17 @@ namespace SpaceCats.Web.Controllers
             cat3.HomePlanet = "Saturn";
             cat3.ImageUrl = "cat_3.jpg";
             cat3.Id = "john-real-quick";
+
+            SpaceCat cat4 = new SpaceCat();
+            cat4.Name = "Bill Purray";
+            cat4.HomePlanet = "Venus";
+            cat4.ImageUrl = "cat_4.png";
+            cat4.Id = "bill-purray";
+            
             list.Add(cat1);
             list.Add(cat2);
             list.Add(cat3);
+            list.Add(cat4);
 
             return list;
         }
