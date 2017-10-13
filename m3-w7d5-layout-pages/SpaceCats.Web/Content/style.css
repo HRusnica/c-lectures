@@ -1,0 +1,21 @@
+﻿@font-face {
+    font-family: "Space Age";
+    src: url("fonts/space-age.otf") format('opentype')
+    /*src: url("css/fonts/Harabara.woff") format("woff"), url("css/fonts/Harabara.otf") format("opentype"), url("css/fonts/Harabara.svg#filename") format("svg");*/
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Space Age";
+}
+
+h1 {
+    font-size: 3em;
+}
+
+body {
+    font-family: Roboto;
+}
+
+#space-cat-directory img {
+    width: 150px;
+}

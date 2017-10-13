@@ -1,0 +1,43 @@
+﻿@using SpaceCats.Web.Models;
+@model List<SpaceCat>
+
+@{        
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+</head>
+<body>    
+    <h1>nasa.gov spacecat directory</h1>
+
+    <p>There are currently @Model.Count known spacecats</p>
+
+    <table id="space-cat-directory">
+
+        @*
+            Dictionary<string, List<SpaceCat>> cats = new Dictionary<string, List<SpaceCat>>();
+            var cats = new Dictionary<string, List<SpaceCat>>();
+        *@
+
+        @foreach(var cat in Model)
+        {
+            
+            <tr>
+                <td><img src="@Url.Content("~/Content/img/" + cat.ImageUrl)" /></td>
+                @*<td><img src="~/Content/img/@cat.ImageUrl" /></td>*@
+                <td>@cat.Name</td>
+                <td>@cat.HomePlanet</td>
+            </tr>
+        }
+
+    </table>
+</body>
+</html>
