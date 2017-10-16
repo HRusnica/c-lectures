@@ -13,36 +13,44 @@ namespace FlyByNightBank.Web.Controllers
         // GET: Calculators/CompoundInterest
         public ActionResult CompoundInterest()
         {
-            return View("CompoundInterest");
+            CompoundInterestModel model = new CompoundInterestModel();
+            return View("CompoundInterest", model);
         }
 
         // GET: Calculators/CompoundInterestResult?Principal={0}&NumberOfYears={1}&InterestRate={2}
-        public ActionResult CompoundInterestResult(double principal, int numberOfYears, double interestRate)
-        {
-            CompoundInterestModel model = new CompoundInterestModel()
-            {
-                Principal = principal,
-                NumberOfYears = numberOfYears,
-                InterestRate = interestRate
-            };
+        // double principal, int numberOfYears, double interestRate <--- ERROR PRONE due to Typos
+        //public ActionResult CompoundInterestResult(double principal, int numberOfYears, double interestRate)
+        //CompoundInterestModel model = new CompoundInterestModel()
+        //{
+        //    Principal = principal,
+        //    NumberOfYears = numberOfYears,
+        //    InterestRate = interestRate
+        //};
 
+        public ActionResult CompoundInterestResult(CompoundInterestModel input)
+        {
+            CompoundInterestModel model = input;
             return View("CompoundInterestResult", model);
         }
 
-
-
-
-        // GET: Calculators/TimeToPayOff
-        public ActionResult TimeToPayOff()
+        // GET: Calculators/CreditCardPayoff
+        // What the user users to fill out the form
+        public ActionResult CreditCardPayoff()
         {
-            return View("TimeToPayOff");
+            CreditCardPayoffModel model = new CreditCardPayoffModel();
+            return View("CreditCardPayoff", model);
         }
 
-        // GET: Calculators/TimeToPayOffResult?apr={0}&balance={1}&monthlyPayment={2}
-        public ActionResult TimeToPayOffResult(CreditCardPayoffModel model)
+        // GET: Calculators/CreditCardPayoffResult?APR=1.2345&Balance=12345.00&MonthlyPayment=111.00
+        // What the user sees after the form has been filled out
+        public ActionResult CreditCardPayoffResult(CreditCardPayoffModel input)
         {
-            return View("TimeToPayOffResult", model);
+            CreditCardPayoffModel model = input;
+            return View("CreditCardPayoffResult", model);
         }
+
+
+
 
 
 

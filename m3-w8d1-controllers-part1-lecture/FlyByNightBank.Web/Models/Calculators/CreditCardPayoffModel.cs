@@ -13,8 +13,7 @@ namespace FlyByNightBank.Web.Models.Calculators
 
         public int GetNumberOfMonthsToPayoff()
         {
-            double percent = APR / 100.00;
-            
+            double percent = this.APR / 100.00;
             double numerator = Math.Log(1 + ((Balance / MonthlyPayment) * (1 - Math.Pow((1 + (percent / 365)), 30))), Math.E);
             double denominator = Math.Log(1 + (percent / 365), Math.E);
             int numberOfPayoffMonths = (int)Math.Ceiling((-1 / 30.0) * (numerator / denominator));

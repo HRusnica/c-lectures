@@ -1,0 +1,20 @@
+﻿@using FlyByNightBank.Web.Models.Calculators;
+@model CreditCardPayoffModel
+
+@{
+    ViewBag.Title = "CreditCardPayoffResult";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Here is your results</h2>
+
+<section class="result">
+
+    <p>Based on what you provided, if you have a balance of <strong>@Model.Balance.ToString("C")</strong>
+    and your monthly payment is <strong>@Model.MonthlyPayment.ToString("C")</strong> at an annual rate of
+    <strong>@Model.APR%</strong> then you will have @Model.GetNumberOfMonthsToPayoff() months to pay off.</p>
+
+    
+
+
+</section>

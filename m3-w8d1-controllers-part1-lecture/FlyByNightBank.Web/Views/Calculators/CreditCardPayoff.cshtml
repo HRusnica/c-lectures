@@ -1,0 +1,33 @@
+﻿@using FlyByNightBank.Web.Models.Calculators;
+@model CreditCardPayoffModel 
+
+@{
+    ViewBag.Title = "CreditCardPayoff";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Enter your Information</h2>
+
+<form action="@Url.Action("CreditCardPayoffResult", "Calculators")" method="get">
+
+    <div class="formInputGroup">
+        @Html.LabelFor(m => m.APR)
+        @Html.TextBoxFor(m => m.APR)
+    </div>
+
+    <div class="formInputGroup">
+        @Html.LabelFor(m => m.Balance)
+        @Html.TextBoxFor(m => m.Balance)
+    </div>
+
+    <div class="formInputGroup">
+        <label for="MonthlyPayment">Monthly Payment</label>
+        <input type="text" name="MonthlyPayment" />
+        @*@Html.LabelFor(m => m.MonthlyPayment)
+        @Html.TextBoxFor(m => m.MonthlyPayment)*@
+    </div>
+
+
+
+    <button>GO!</button>
+</form>

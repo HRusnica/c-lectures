@@ -121,8 +121,8 @@
     <Content Include="Views\Calculators\CompoundInterest.cshtml" />
     <Content Include="Views\Calculators\CompoundInterestResult.cshtml" />
     <Content Include="Views\Home\WhyFlyByNight.cshtml" />
-    <Content Include="Views\Calculators\TimeToPayOff.cshtml" />
-    <Content Include="Views\Calculators\TimeToPayOffResult.cshtml" />
+    <Content Include="Views\Calculators\CreditCardPayoff.cshtml" />
+    <Content Include="Views\Calculators\CreditCardPayoffResult.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

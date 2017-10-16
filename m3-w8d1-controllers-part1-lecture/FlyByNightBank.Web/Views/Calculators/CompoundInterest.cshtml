@@ -1,6 +1,7 @@
 ﻿@using FlyByNightBank.Web.Models.Calculators;
+@model CompoundInterestModel
 
-@model FlyByNightBank.Web.Models.Calculators.CompoundInterestModel
+
 @{
     ViewBag.Title = "Compound Interest Calculator";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -8,24 +9,47 @@
 
 <h2>Compound Interest</h2>
 
-@using (Html.BeginForm("CompoundInterestResult", "Calculators", FormMethod.Get))
-{
+<form action="@Url.Action("CompoundInterestResult", "Calculators")" method="get">
+
     <div class="formInputGroup">
-        @Html.Label("Principal", "Principal Down")
+
+        @Html.LabelFor(m => m.Principal)
         @Html.TextBoxFor(m => m.Principal)
+
+        @*<label for="Principal">Principal Down</label>
+        <input type="text" name="Principal" />*@
+
     </div>
     <div class="formInputGroup">
-        @Html.Label("InterestRate", "Interest Rate")
-        @Html.DropDownListFor(m => m.InterestRate, CompoundInterestModel.InterestRates)
+
+        @Html.LabelFor(m => m.InterestRate)
+        @Html.TextBoxFor(m => m.InterestRate)
+
+        @*<label for="InterestRate">Interest Rate</label>
+        <select name="InterestRate">
+            <option value="1.0">1.0%</option>
+            <option value="1.5">1.5%</option>
+            <option value="1.6">1.6%</option>
+            <option value="1.7">1.7%</option>
+            <option value="1.8">1.8%</option>
+            <option value="2.0">2.0%</option>
+            <option value="2.5">2.5%</option>
+            <option value="3.0">3.0%</option>
+        </select>*@
     </div>
     <div class="formInputGroup-radio">
-        @Html.RadioButtonFor(m => m.NumberOfYears, 1, false) 1 years
-        @Html.RadioButtonFor(m => m.NumberOfYears, 3, false) 3 years
-        @Html.RadioButtonFor(m => m.NumberOfYears, 5, false) 5 years
+        @Html.RadioButtonFor(s => s.NumberOfYears, 1) 1 year
+        @Html.RadioButtonFor(s => s.NumberOfYears, 3) 3 years
+        @Html.RadioButtonFor(s => s.NumberOfYears, 5) 5 years
+
+        
+
+        @*<input type="radio" name="NumberOfYears" value="1" /> 1 years
+        <input type="radio" name="NumberOfYears" value="3" /> 3 years
+        <input type="radio" name="NumberOfYears" value="5" /> 5 years*@
     </div>
 
 
     <button class="formSubmitButton">CALCULATE!</button>
 
-}
-
+</form>
