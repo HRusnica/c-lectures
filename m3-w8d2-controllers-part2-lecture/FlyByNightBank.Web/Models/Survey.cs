@@ -15,7 +15,7 @@ namespace FlyByNightBank.Web.Models
         public string AdditionalFeedback { get; set; }
         public DateTime SurveySubmissionTimestamp { get; set; }
 
-        public static List<SelectListItem> States
+        public List<SelectListItem> States
         {
             get
             {
@@ -28,7 +28,7 @@ namespace FlyByNightBank.Web.Models
             }
         }
 
-        public static List<SelectListItem> SurveyAppreciationLevels
+        public List<SelectListItem> SurveyAppreciationLevels
         {
             get
             {
@@ -37,7 +37,7 @@ namespace FlyByNightBank.Web.Models
                     new SelectListItem { Text = "Outstanding", Value = "5" },
                     new SelectListItem { Text = "Above Average", Value = "4" },
                     new SelectListItem { Text = "Satisfied", Value = "3" },
-                    new SelectListItem { Text = "Below Average", Value = "3" },
+                    new SelectListItem { Text = "Below Average", Value = "2" },
                     new SelectListItem { Text = "Poor", Value = "1" }
                 };
             }

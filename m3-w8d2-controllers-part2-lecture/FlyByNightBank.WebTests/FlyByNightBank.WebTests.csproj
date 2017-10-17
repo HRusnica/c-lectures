@@ -91,6 +91,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="BodyDouble\SurveyBodyDouble.cs" />
     <Compile Include="Controllers\CalculatorsControllerTests.cs" />
     <Compile Include="Controllers\SurveyControllerTests.cs" />
     <Compile Include="Models\Calculators\CompoundInterestCalculatorTests.cs" />
@@ -99,7 +100,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
+    <Content Include="Web.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FlyByNightBank.Web\FlyByNightBank.Web.csproj">

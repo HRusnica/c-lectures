@@ -1,0 +1,41 @@
+﻿@using FlyByNightBank.Web.Models;
+@model Survey
+
+@{
+    ViewBag.Title = "TakeSurvey";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Take the Survey Here</h2>
+
+<form action="@Url.Action("TakeSurvey", "Survey")" method="post">
+
+    <div class="formInputGroup">
+        @Html.LabelFor(m => m.CustomerName)
+        @Html.TextBoxFor(m => m.CustomerName, new { placeholder="not required", id="customer-name", @class = "custom-class" })
+    </div>
+    <div class="formInputGroup">
+        <label for="State">State</label>
+
+        @Html.DropDownListFor(m => m.State, Model.States)
+
+        @*<select name="State">
+            <option value="OH">Ohio</option>
+            <option value="MI">Michigan</option>
+            <option value="IN">Indiana</option>
+        </select>*@
+    </div>
+
+    <div class="formInputGroup">
+        @Html.LabelFor(m => m.CustomerExperienceLevel)
+        @Html.DropDownListFor(m => m.CustomerExperienceLevel, Model.SurveyAppreciationLevels)
+    </div>
+
+    <div class="formInputGroup">
+        @Html.LabelFor(m => m.AdditionalFeedback)
+        @Html.TextAreaFor(m => m.AdditionalFeedback, new { placeholder = "not required" })
+    </div>
+
+    <button>Submit Survey</button>
+
+</form>

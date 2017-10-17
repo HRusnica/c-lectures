@@ -9,6 +9,7 @@ using System.Web.Mvc;
 using FlyByNightBank.Web.DAL;
 using Moq;
 using FlyByNightBank.Web.Models;
+using FlyByNightBank.WebTests.BodyDouble;
 
 namespace FlyByNightBank.Web.Controllers.Tests
 {
@@ -23,57 +24,50 @@ namespace FlyByNightBank.Web.Controllers.Tests
     [TestClass()]
     public class SurveyControllerTests
     {
-        /*
-        * TEST: Index Action (HTTP GET)
-        *   returns Index ViewResult
-        */
-        [TestMethod()]
-        public void Index_HttpGet_ReturnsCorrectView()
-        {
-            SurveyController controller = new SurveyController(null);
-
-            ViewResult result = controller.Index() as ViewResult;
-
-            Assert.IsNotNull(result);
-            Assert.AreEqual("Index", result.ViewName);
-        }
-
-        /*
-        * TEST: Index Action (HTTP POST)
-        *   saves record
-        *   returns RedirectToRouteResult
-        */
         [TestMethod]
-        public void Index_HttpPost_SavesRecordAndReturnsRedirect()
+        public void TakeSurveyAction_ReturnsCorrectViewAndModel()
         {
             //Arrange
-            Mock<ISurveyDAL> mockDal = new Mock<ISurveyDAL>();
-            SurveyController controller = new SurveyController(mockDal.Object);
-            Survey model = new Survey();
+            SurveyBodyDouble fakeDal = new SurveyBodyDouble();
+            SurveyController controller = new SurveyController(fakeDal);
 
             //Act
-            RedirectToRouteResult result = controller.Index(model) as RedirectToRouteResult;
+            ActionResult result = controller.TakeSurvey();
 
             //Assert
-            Assert.IsNotNull(result);
-            Assert.AreEqual("Confirmation", result.RouteValues["action"]);
-            mockDal.Verify(m => m.SaveSurvey(model)); //verify that our test called SaveSurvey on the Mock ISurveyDAL
+            //Test to see if result is of type ViewResult
+            Assert.IsTrue(result.GetType() == typeof(ViewResult));
+
+            //Cast result into a ViewResult
+            ViewResult vr = (ViewResult)result;
+            Assert.AreEqual("TakeSurvey", vr.ViewName); //<-- check the name of the view
+
+            // Check if the model is a Survey, not anything else
+            Assert.IsTrue(vr.Model.GetType() == typeof(Survey));
         }
 
-        /*
-        * TEST: Confirmation Action (HTTP GET)
-        *   returns ViewResult
-        */
         [TestMethod]
-        public void Confirmation_HttpGet_ReturnsCorrectView()
+        public void SurveyAction_ReturnsCorrectView()
         {
-            SurveyController controller = new SurveyController(null);
+            //Arrange
+            SurveyBodyDouble fakeDal = new SurveyBodyDouble();
+            SurveyController controller = new SurveyController(fakeDal);
+            Survey fakeSurvey = new Survey();
 
-            ViewResult result = controller.Confirmation() as ViewResult;
+            //Act
+            ActionResult result = controller.SurveyResult(fakeSurvey);
 
-            Assert.IsNotNull(result);
-            Assert.AreEqual("Confirmation", result.ViewName);
+            //Assert
+            //Test to see if result is of type ViewResult
+            Assert.IsTrue(result.GetType() == typeof(ViewResult));
+
+            //Cast result into a ViewResult
+            ViewResult vr = (ViewResult)result;
+            Assert.AreEqual("SurveyResult", vr.ViewName); //<-- check the name of the view
 
         }
+
+
+
     }
 }
