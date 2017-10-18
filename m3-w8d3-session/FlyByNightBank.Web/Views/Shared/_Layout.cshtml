@@ -19,7 +19,20 @@
             <li>@Html.ActionLink("Credit Card Payoff Calculator", "TimeToPayOff", "Calculators")</li>
             <li>@Html.ActionLink("Appreciation Survey", "Index", "Survey")</li>
 
-            
+            <li style="float: right;">
+                @if (Session["visitor_zipcode"] == null)
+                {
+                    <form action="@Url.Action("ViewRates", "Home")" method="get">
+                        <input type="text" placeholder="enter zip code" name="zipcode" />
+                        <button>Get Rates</button>
+                    </form>
+                }
+                else
+                {
+                    @*@Html.ActionLink("Rates for " + Session["visitor_zipcode"], "ViewRates", "Home")*@
+                    <a href="@Url.Action("ViewRates", "Home")">Rates for @Session["visitor_zipcode"]</a>
+                }
+            </li>
         </ul>
     </nav>
 

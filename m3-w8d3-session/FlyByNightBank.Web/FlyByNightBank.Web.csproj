@@ -161,6 +161,7 @@
     <Content Include="Views\Survey\TakeSurvey.cshtml" />
     <Content Include="Views\Survey\SurveyResult.cshtml" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <Content Include="Views\Home\ViewRates.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

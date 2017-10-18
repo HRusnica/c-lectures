@@ -1,0 +1,48 @@
+﻿@model FlyByNightBank.Web.Models.InterestRateModel
+
+@{
+    ViewBag.Title = "ViewRates";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Rates for @Model.ZipCode</h2>
+
+<style>
+    table {
+        margin: 0 auto;
+    }
+
+    table thead {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    table td {
+        width: 150px;
+    }
+    
+</style>
+
+<table>
+    <thead>
+        <tr>
+            <td>Product</td>
+            <td>Rate</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Savings Rate</td>
+            <td>@Model.SavingsRate%</td>
+        </tr>
+        <tr>
+            <td>Checking Rate</td>
+            <td>@Model.CheckingRate%</td>
+        </tr>
+        <tr>
+            <td>CD Rate</td>
+            <td>@Model.CDRate%</td>
+        </tr>
+    </tbody>
+</table>
+
