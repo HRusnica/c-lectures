@@ -24,8 +24,12 @@ input[type='checkbox'] {
     border-radius: 5px;
     padding: 2px 5px;
     margin: 20px;
-    transition: all .6s ease;
+    transition: all .3s ease;
 }
+
+/*.box:hover {
+    transform: scale(1.25);
+}*/
 
 .box div { 
     margin-top: 10px;
@@ -33,6 +37,7 @@ input[type='checkbox'] {
 
 .red {
     background-color: #ea4335;
+    /*color: #fff;*/
 }
 
 .green {
@@ -41,6 +46,7 @@ input[type='checkbox'] {
 
 .blue {
     background-color: #4285F4;
+    /*color: #FFF;*/
 }
 
 .yellow {
