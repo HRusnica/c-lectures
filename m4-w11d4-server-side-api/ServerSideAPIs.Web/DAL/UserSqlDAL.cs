@@ -20,9 +20,9 @@ namespace ServerSideAPIs.Web.DAL
                 {
                     conn.Open();
                     SqlCommand cmd = new SqlCommand("INSERT INTO users VALUES (@name, @username, @email);", conn);
-                    cmd.Parameters.AddWithValue("@name", newUser.Name);
-                    cmd.Parameters.AddWithValue("@username", newUser.Username);
-                    cmd.Parameters.AddWithValue("@email", newUser.Email);
+                    cmd.Parameters.AddWithValue("@name", newUser.name);
+                    cmd.Parameters.AddWithValue("@username", newUser.username);
+                    cmd.Parameters.AddWithValue("@email", newUser.email);
 
                     cmd.ExecuteNonQuery();
                 }
@@ -60,10 +60,10 @@ namespace ServerSideAPIs.Web.DAL
                 {
                     conn.Open();
                     SqlCommand cmd = new SqlCommand("UPDATE users SET name = @name, username = @username, email = @email WHERE id = @id;", conn);
-                    cmd.Parameters.AddWithValue("@name", updatedUser.Name);
-                    cmd.Parameters.AddWithValue("@username", updatedUser.Username);
-                    cmd.Parameters.AddWithValue("@email", updatedUser.Email);
-                    cmd.Parameters.AddWithValue("@id", updatedUser.Id);
+                    cmd.Parameters.AddWithValue("@name", updatedUser.name);
+                    cmd.Parameters.AddWithValue("@username", updatedUser.username);
+                    cmd.Parameters.AddWithValue("@email", updatedUser.email);
+                    cmd.Parameters.AddWithValue("@id", updatedUser.id);
 
                     cmd.ExecuteNonQuery();
                 }
@@ -89,10 +89,10 @@ namespace ServerSideAPIs.Web.DAL
                     {
                         User u = new User()
                         {
-                            Id = Convert.ToInt32(reader["id"]),
-                            Name = Convert.ToString(reader["name"]),
-                            Username = Convert.ToString(reader["username"]),
-                            Email = Convert.ToString(reader["email"])
+                            id = Convert.ToInt32(reader["id"]),
+                            name = Convert.ToString(reader["name"]),
+                            username = Convert.ToString(reader["username"]),
+                            email = Convert.ToString(reader["email"])
                         };
                         users.Add(u);
                     }
@@ -123,10 +123,10 @@ namespace ServerSideAPIs.Web.DAL
                     {
                         user = new User()
                         {
-                            Id = Convert.ToInt32(reader["id"]),
-                            Name = Convert.ToString(reader["name"]),
-                            Username = Convert.ToString(reader["username"]),
-                            Email = Convert.ToString(reader["email"])
+                            id = Convert.ToInt32(reader["id"]),
+                            name = Convert.ToString(reader["name"]),
+                            username = Convert.ToString(reader["username"]),
+                            email = Convert.ToString(reader["email"])
                         };                        
                     }
 

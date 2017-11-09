@@ -12,6 +12,9 @@ namespace ServerSideAPIs.Web
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            //4. Look for custom routes
+            routes.MapMvcAttributeRoutes();
+
 
             routes.MapRoute(
                 name: "Default",
